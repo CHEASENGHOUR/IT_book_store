@@ -3,6 +3,7 @@ import { HiOutlineShoppingBag } from "react-icons/hi";
 import { GoPerson } from "react-icons/go";
 import { TbMinusVertical } from "react-icons/tb";
 import Logo from "./Logo";
+import FilterSearch from "./FilterSearch";
 function Navigations() {
     const miniLinks = [
         {
@@ -37,9 +38,9 @@ function Navigations() {
                     }
                 </div>
             </div>
-            <div className="px-40 py-6">
+            <div className="px-40 py-6 flex items-center">
                 <Logo/>
-                
+                <FilterSearch/>
             </div>
 
         </div>
