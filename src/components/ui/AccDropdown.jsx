@@ -1,6 +1,6 @@
 function AccDropdown() {
   return (
-    <div className=' w-[180px] text-sm flex flex-col p-3 gap-3 '>
+    <div className=' w-[180px] text-sm flex flex-col p-3 gap-3 bg-white/95'>
         <div className=' flex flex-col gap-1 items-center'>
             <p>Returning Costumer?</p>
             <button type="button" 

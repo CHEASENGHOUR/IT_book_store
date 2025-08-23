@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&display=swap');
 @import "tailwindcss";
 
 @theme {
   --color-main: rgb(2, 4, 53);
+  --font-dangrek: "Dangrek", sans-serif;
 }
