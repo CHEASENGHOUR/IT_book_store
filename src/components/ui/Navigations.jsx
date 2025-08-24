@@ -48,46 +48,48 @@ function Navigations() {
                     }
                 </div>
             </div>
-            <div className="px-25 py-6 flex items-center gap-8">
+            <div className="min-[1200px]:px-25 py-6 flex items-center gap-8 box-border">
                 <Logo />
-                <FilterSearch />
-                <div className="relative inline-block">
-                    <div
-                        onClick={handleDropdown}
-                        className="h-full py-3 text-2xl cursor-pointer"
-                    >
-                        <GoPerson />
-                    </div>
+                <div className=" flex items-center min-[1200px]:gap-8 justify-end w-full bg-amber-100">
+                    <FilterSearch />
+                    <div className="relative inline-block">
+                        <div
+                            onClick={handleDropdown}
+                            className="h-full py-3 text-2xl cursor-pointer"
+                        >
+                            <GoPerson />
+                        </div>
 
-                    <div
-                        className={`absolute top-full 
+                        <div
+                            className={`absolute top-full 
                                     left-[-50px] origin-top transition-all 
                                     duration-500 ease-in-out border-t-2 border-t-main
                                     shadow-lg/10 rounded-b-lg
                             ${drop
-                                ? "opacity-100 scale-y-100 visible"
-                                : "opacity-0 scale-y-0 invisible"
-                            }`}
-                    >
-                        <AccDropdown/>
+                                    ? "opacity-100 scale-y-100 visible"
+                                    : "opacity-0 scale-y-0 invisible"
+                                }`}
+                        >
+                            <AccDropdown />
+                        </div>
                     </div>
-                </div>
-                <div onClick={() => setIsCartOpen(true)}
-                    className="
+                    <div onClick={() => setIsCartOpen(true)}
+                        className="
                     flex w-1/6 items-center 
                     gap-2 px-0 py-3 text-2xl
                     ">
-                    <HiOutlineShoppingBag />
-                    <p className=" max-[1200px]:hidden ">0 ៛</p>
+                        <HiOutlineShoppingBag />
+                        <p className=" max-[1200px]:hidden ">0 ៛</p>
+                    </div>
                 </div>
             </div>
             <div className="px-25 py-6 flex items-center gap-5">
-                <Menu/>
+                <Menu />
             </div>
 
-            <CartSidebar 
-                Open={isCartOpen} 
-                Close={() => setIsCartOpen(false)} 
+            <CartSidebar
+                Open={isCartOpen}
+                Close={() => setIsCartOpen(false)}
             />
         </div>
     )
