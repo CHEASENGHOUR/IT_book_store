@@ -5,6 +5,8 @@ import Shop from "./page/Shop"
 import Navigations from "./ui/Navigations"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { PageContext } from "./context/PageContext"
+import Footer from "./ui/Footer"
+import logo from "../assets/img/IT_logo.jpeg"
 function Layout() {
   const pagesRoute = [
         { id: 1, name: "", text: "ទំព័រដើម" },
@@ -13,7 +15,7 @@ function Layout() {
         { id: 4, name: "contect", text: "ទំនាក់ទំនង" }
     ]
   return (
-    <PageContext.Provider value={pagesRoute}>
+    <PageContext.Provider value={pagesRoute} >
         <Router>
           <Navigations/>
           <Routes>
@@ -22,6 +24,7 @@ function Layout() {
             <Route path="/about" element={<About/>}/>
             <Route path="/contect" element={<Contect/>}/>
           </Routes>
+          <Footer/>
         </Router>
     </PageContext.Provider>
   )
