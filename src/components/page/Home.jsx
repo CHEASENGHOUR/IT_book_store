@@ -1,8 +1,11 @@
 import React from 'react'
+import ShowBook from '../ui/ShowBook'
 
 function Home( {data} ) {
   return (
-    <div>Home</div>
+    <div>
+      <ShowBook/>
+    </div>
   )
 }
 
